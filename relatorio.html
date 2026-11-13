@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Space Code - organize suas tecnologias, tarefas e projetos de programação.">
+  <meta name="author" content="Grupo PW1">
+  <title>Relatório | Space Code</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet">
+  <link rel="icon" type="image/png" href="imagens/logo-icone.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topo">
+    <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Space Code"></a>
+    <nav>
+      <ul>
+        <li><a href="index.html">Início</a></li>
+        <li><a href="materias.html">Matérias</a></li>
+        <li><a href="tarefas.html">Tarefas</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li id="link-relatorio" class="oculto"><a class="ativo" href="relatorio.html">Relatório</a></li>
+        <li><a href="index.html#acesso" id="link-login">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main id="area-admin">
+    <div class="titulo-pagina">
+      <span class="etiqueta">Área do administrador</span>
+      <h1>Produtividade</h1>
+      <p>Só o administrador vê esta página: veja e exclua tudo o que está salvo no localStorage.</p>
+    </div>
+    <section>
+      <h2>Balanço geral</h2>
+      <div class="stats">
+        <div class="stat"><span class="numero" id="est-concluidas">0</span>tarefas concluídas</div>
+        <div class="stat"><span class="numero" id="est-materias">0</span>tecnologias</div>
+        <div class="stat"><span class="numero" id="est-projetos">0</span>projetos</div>
+        <div class="stat"><span class="numero" id="est-horas">0</span>horas de estudo</div>
+      </div>
+    </section>
+    <section>
+      <h2>Usuários cadastrados</h2>
+      <table>
+        <thead><tr><th>Nome</th><th>E-mail</th><th>Ação</th></tr></thead>
+        <tbody id="corpo-usuarios"></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Tecnologias</h2>
+      <table>
+        <thead><tr><th>Nome</th><th>Nível</th><th>Horas</th><th>Ação</th></tr></thead>
+        <tbody id="corpo-materias"></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Tarefas</h2>
+      <table>
+        <thead><tr><th>Tarefa</th><th>Matéria</th><th>Status</th><th>Ação</th></tr></thead>
+        <tbody id="corpo-tarefas"></tbody>
+      </table>
+    </section>
+    <section>
+      <h2>Projetos</h2>
+      <table>
+        <thead><tr><th>Nome</th><th>Link</th><th>Ação</th></tr></thead>
+        <tbody id="corpo-projetos"></tbody>
+      </table>
+    </section>
+  </main>
+  <footer>
+    <div class="rodape">
+      <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Space Code"></a>
+      <p>Trabalho PW1 - organize seus estudos e projetos</p>
+      <a href="mailto:contato@spacecode.com">contato@spacecode.com</a>
+    </div>
+  </footer>
+  <a class="topo" href="#topo">↑</a>
+  <script src="script.js"></script>
+</body>
+</html>

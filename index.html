@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Space Code - organize suas tecnologias, tarefas e projetos de programação.">
+  <meta name="author" content="Grupo PW1">
+  <title>Início | Space Code</title>
+  <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,800" rel="stylesheet">
+  <link rel="icon" type="image/png" href="imagens/logo-icone.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header id="topo">
+    <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Space Code"></a>
+    <nav>
+      <ul>
+        <li><a class="ativo" href="index.html">Início</a></li>
+        <li><a href="materias.html">Matérias</a></li>
+        <li><a href="tarefas.html">Tarefas</a></li>
+        <li><a href="projetos.html">Projetos</a></li>
+        <li id="link-relatorio" class="oculto"><a href="relatorio.html">Relatório</a></li>
+        <li><a href="index.html#acesso" id="link-login">Entrar</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <section class="hero">
+      <div class="hero-texto">
+        <span class="etiqueta">Para quem programa</span>
+        <h1>Seu <em>espaço de código</em> para estudar e criar.</h1>
+        <p>O Space Code organiza as tecnologias que você estuda, as tarefas do dia e os seus projetos. Tudo salvo no seu navegador, sem complicação.</p>
+        <a class="btn" href="#acesso">Começar agora</a>
+      </div>
+    </section>
+
+    <section>
+      <h2>Seu painel</h2>
+      <div class="stats">
+        <div class="stat"><span class="numero" id="est-concluidas">0</span>tarefas concluídas</div>
+        <div class="stat"><span class="numero" id="est-materias">0</span>tecnologias</div>
+        <div class="stat"><span class="numero" id="est-projetos">0</span>projetos</div>
+        <div class="stat"><span class="numero" id="est-horas">0</span>horas de estudo</div>
+      </div>
+    </section>
+
+    <section>
+      <h2>Como funciona</h2>
+      <div class="passos">
+        <div class="passo"><span class="n">01</span><h3>Matérias</h3><p>Cadastre o que você estuda e acompanhe as horas.</p></div>
+        <div class="passo"><span class="n">02</span><h3>Tarefas</h3><p>Mova cada tarefa entre A fazer, Fazendo e Feito.</p></div>
+        <div class="passo"><span class="n">03</span><h3>Projetos</h3><p>Guarde links e descrições dos seus projetos.</p></div>
+        <div class="passo oculto" id="passo-relatorio"><span class="n">04</span><h3>Relatório</h3><p>Área do administrador: veja os dados de todos e exclua o que quiser.</p></div>
+      </div>
+    </section>
+
+    <section id="acesso">
+      <h2>Entre ou crie sua conta</h2>
+      <p id="mensagem"></p>
+      <div class="duas">
+        <form name="formLogin" onsubmit="return entrar();">
+          <fieldset>
+            <legend>Já tenho conta</legend>
+            <label for="emailLogin">E-mail:</label>
+            <input type="email" id="emailLogin" name="email" placeholder="voce@email.com" required>
+            <label for="senhaLogin">Senha:</label>
+            <input type="password" id="senhaLogin" name="senha" maxlength="30" required>
+            <input type="submit" value="Entrar">
+          </fieldset>
+        </form>
+        <form name="formCadastro" onsubmit="return cadastrar();">
+          <fieldset>
+            <legend>Quero me cadastrar</legend>
+            <label for="nomeCad">Nome:</label>
+            <input type="text" id="nomeCad" name="nome" placeholder="Seu nome">
+            <label for="emailCad">E-mail:</label>
+            <input type="text" id="emailCad" name="email" placeholder="voce@email.com">
+            <label for="senhaCad">Senha (mín. 4 caracteres):</label>
+            <input type="password" id="senhaCad" name="senha" maxlength="30">
+            <input type="submit" value="Cadastrar">
+          </fieldset>
+        </form>
+      </div>
+      <button type="button" class="perigo" onclick="sair()">Sair da conta</button>
+    </section>
+  </main>
+  <footer>
+    <div class="rodape">
+      <a class="logo" href="index.html"><img src="imagens/logo.png" alt="Space Code"></a>
+      <p>Trabalho PW1 - organize seus estudos e projetos</p>
+      <a href="mailto:contato@spacecode.com">contato@spacecode.com</a>
+    </div>
+  </footer>
+  <a class="topo" href="#topo">↑</a>
+  <script src="script.js"></script>
+</body>
+</html>
